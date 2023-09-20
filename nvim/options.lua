@@ -6,9 +6,9 @@ vim.opt.scrolloff = 16
 vim.opt.colorcolumn = "80"
 
 --Versioning
-vim.opt.backupdir = os.getenv("HOME") .. ".backup/" 
+vim.opt.backupdir = os.getenv("HOME") .. "/.backup/" 
 vim.opt.backup = true
-vim.opt.undodir = os.getenv("HOME") .. ".cache/"
+vim.opt.undodir = os.getenv("HOME") .. "/.cache/"
 vim.opt.undofile = true
 --Numbering
 vim.opt.number = true
