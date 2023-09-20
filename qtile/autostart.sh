@@ -1,7 +1,7 @@
-#!/bin/bash
+#!/usr/bin/env bash
 picom --vsync &
 setxkbmap -option caps:swapescape
-nitrogen --set-zoom-fill --random /usr/share/backgrounds/
+nitrogen --set-zoom-fill --random /home/mb/conf/backgrounds/
 
 #Output name changes on reboot, this way at least one will be activated
 xrandr --output HDMI-1-0 --mode 2560x1440 &
