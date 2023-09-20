@@ -36,7 +36,7 @@ import os
 import subprocess
 
 mod = "mod4"
-terminal = "alacritty"
+terminal = "kgx"
 border_focus = "#9a9996"
 border_normal = "#241f31"
 
@@ -86,9 +86,7 @@ keys = [
     # Launch applications
     Key([mod], "r", lazy.spawn("dmenu_run"), desc="Launch dmenu"),
     Key([mod], "Return", lazy.spawn(terminal), desc="Launch terminal"),
-    Key([mod], "e", lazy.spawn("emacsclient -c"), desc="Launch rofi"),
-    Key([mod], "f", lazy.spawn("firefox"), desc="Launch rofi"),
-    Key([mod], "s", lazy.spawn("flatpak run com.brave.Browser"), desc="Launch rofi"),
+    Key([mod], "s", lazy.spawn("firefox"), desc="Launch rofi"),
 ]
 
 groups = [Group(i) for i in "123456789"]
