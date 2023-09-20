@@ -46,6 +46,11 @@ in
       enable = true;
       settings = {};
     };
+	programs.git = {
+      enable = true;
+      userName  = "Marco Bazzani";
+      userEmail = "mbazzani@ucsd.edu";
+    };
   
     programs.neovim = nvimConfig pkgs;
   }
