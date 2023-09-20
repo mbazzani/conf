@@ -104,6 +104,7 @@
     git
     wget
     exa
+    tldr
     zsh
     qtile
     picom
