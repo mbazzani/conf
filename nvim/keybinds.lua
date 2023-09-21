@@ -2,7 +2,8 @@
 vim.g.mapleader = " "
 --Double leader enters command mode
 vim.keymap.set("n","<leader><leader>",":")
-vim.keymap.set("n","<leader>.",vim.cmd.Ex)
+--vim.keymap.set("n","<leader>.",vim.cmd.Ex)
+vim.keymap.set('n', '<leader>.', ':NvimTreeOpen<CR>', { noremap = true, silent = true })
 --File actions
 vim.keymap.set("n","<leader>q",vim.cmd.q)
 vim.keymap.set("n","<leader>w",vim.cmd.w)

@@ -47,6 +47,7 @@
     LC_TIME = "en_US.UTF-8";
   };
 
+
   # Enable the X11 windowing system.
   services.xserver.enable = true;
   services.xserver.windowManager.qtile.enable = true;
@@ -99,20 +100,23 @@
 
   # List packages installed in system profile. To search, run:
   # $ nix search wget
+
   environment.systemPackages = with pkgs; [
     neovim
     git
     wget
     exa
     tldr
-	killall
+    killall
     zsh
     qtile
     picom
     nitrogen
     dmenu
     gcc_multi
-	rustup
+    rustup
+    alacritty
+    (python3.withPackages(ps: with ps; [ pandas numpy torch scipy matplotlib ]))
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
@@ -126,7 +130,7 @@
   # List services that you want to enable:
 
   # Enable the OpenSSH daemon.
-  # services.openssh.enable = true;
+  services.openssh.enable = true;
 
   # Open ports in the firewall.
   # networking.firewall.allowedTCPPorts = [ ... ];

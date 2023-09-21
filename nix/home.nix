@@ -23,20 +23,23 @@ in
 
       # LSP
 	  rnix-lsp nixfmt #nix
-	  luajitPackages.lua-lsp stylua #lua
+	  lua-language-server stylua #lua
 	  rust-analyzer #rust
 	  rustfmt
 	  ccls
 	  nodePackages.pyright
+      (pkgs.nerdfonts.override { fonts = [ "FiraCode" ]; })
+	  fontconfig
     ];
   
+
     programs.zsh = {
       enable = true;
       shellAliases = {
         ls = "exa";
         ll = "exa -l";
 		sudo = "sudo -E";
-        update = "sudo nixos-rebuild switch";
+        update = "command sudo nixos-rebuild switch";
       };
       #histSize = 10000;
       #histFile = "${config.xdg.dataHome}/zsh/history";
